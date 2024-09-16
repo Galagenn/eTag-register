@@ -1,0 +1,140 @@
+
+.add-form{
+  margin-top: 67px;
+}
+
+.hero {
+  margin-top: 67px;
+}
+
+.ContentLayout_ContentLayout__VEBjn {
+  margin: 0 auto;
+  max-width: 530px;
+  padding: 0 30px;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (max-width: 350px) {
+  .ContentLayout_ContentLayout__VEBjn {
+    padding: 0 20px;
+  }
+}
+
+.Policies_policy__cSxku {
+  color: #8b8b8b;
+  font-size: 12px;
+  text-align: center;
+}
+.Policies_policy__cSxku span {
+  color: #635ce8;
+  cursor: pointer;
+}
+
+.Button_Button__zmFXg {
+  max-width: 470px;
+  margin: 20px auto;
+  align-items: center;
+  background: #635ce8;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  height: 60px;
+  justify-content: center;
+  line-height: 22px;
+  max-height: 100%;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  transition: scale 0.2s ease;
+  width: 100%;
+}
+.Button_Button__zmFXg:active {
+  scale: 0.95;
+}
+
+
+.form-container {
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 17px 15px;
+  border: 1px solid #eaeaea;
+  transition: border-color .2s ease;
+  border-radius: 17px; 
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#password,
+input[type="password"] {
+  border-radius: 17px 0 0 15px;
+
+}
+
+.profile-link-wrapper {
+  position: relative;
+  width: 100%;
+  &::before {
+    content: "my.etag.store/";
+    font-size: 16px;
+
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-weight: bold;
+  }
+  input {
+    padding-left: 120px; // Увеличен отступ для правильного отображения префикса
+  }
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  
+  input {
+    width: calc(100% - 66px); // Чтобы поле не выходило за рамки
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 1px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #aaa;
+    padding: 17px 21px;    
+    border: 1px solid #ccc;
+    border-radius: 0 15px 15px 0;
+    &:hover {
+      color: #333;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<section class="add-form">
+    <div class="add-form__container">
+        <div class="ContentLayout_ContentLayout__VEBjn">
+            <div class="form-container">
+                <form action="#">
+                    <div class="form-group">
+                        <label for="email">Ваш e-mail</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" name="password" placeholder="Введите пароль">
+                            <span class="toggle-password" onclick="togglePassword('password')">&#128065;</span>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        
+
+        </div><!--/$-->
+        <button data-tour="form-submit" type="submit" class="Button_Button__zmFXg">Объединить</button>
+        </form>
+        <div class="Policies_policy__cSxku">Нажимая кнопку «Объединить» , вы даете<!-- --> <span role="button"
+                tabindex="0">согласие на обработку персональных данных</span> <!-- -->и
+            соглашаетесь с<!-- --> <span role="button" tabindex="0">политикой конфиденциальности</span>
+        </div>
+    </div>
+    </div>
+
+    </div>
+</section>
+
+<script>
+    function togglePassword(inputId) {
+        const input = document.getElementById(inputId);
+        if (input.type === "password") {
+            input.type = "text";
+        } else {
+            input.type = "password";
+        }
+    }
+</script>

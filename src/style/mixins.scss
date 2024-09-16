@@ -1,0 +1,62 @@
+@use "sass:math";
+
+//REM
+@function toRem($px, $current: 16) {
+   $result: math.div($px, $current) + rem;
+   @return $result;
+}
+
+//EM
+@function toEm($px, $current: 16) {
+   $result: math.div($px, $current) + em;
+   @return $result;
+}
+
+@mixin reset-button {
+   cursor: pointer;
+   padding: 0;
+   background-color: transparent;
+   border: none;
+}
+
+@mixin flex-center($isInline: false) {
+   @if $isInline {
+      display: inline-flex;
+   } @else {
+      display: flex;
+   }
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin abs-center {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   translate: -50% -50%;
+}
+
+@mixin square($size) {
+   width: toRem($size);
+   aspect-ratio: 1;
+}
+
+@mixin circle($size) {
+   width: toRem($size);
+   aspect-ratio: 1;
+   border-radius: 50%;
+}
+
+@mixin fluid-property($property, $max, $min, $maxWidth: 1200, $minWidth: 320) {
+   $v: math.div((100 * ($max - $min)), ($maxWidth - $minWidth));
+   $r: math.div((($minWidth * $max) - ($maxWidth * $min)), ($minWidth - $maxWidth));
+
+   #{$property}: clamp(toRem($min), #{$v}vw + toRem($r), toRem($max));
+}
+
+@mixin input-reset {
+   appearance: none;
+   background-color: transparent;
+   border: none;
+   width: 100%;
+}

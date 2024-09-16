@@ -1,0 +1,41 @@
+@use "sass:math";
+
+// Подключения шрифтов
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+// Сброс стилей
+@import "./reset";
+
+// Подключение переменных
+@import "./variables";
+
+// Подключение миксинов
+@import "./mixins";
+
+// Подключение глобальных стилей
+@import "./global";
+
+
+// Подключение стилей отдельных блоков
+@import "./header/header";
+@import "./footer/footer";
+
+// Подключение стилей отдельных секции
+@import "./blocks/forms";
+
+
+//========================================================================================================================================================
+
+// Ширина ограничивающего контейнера
+$maxWidthContainer: 530;
+// Общий отступ у контейнера
+// 30 = по 15px слева и справа
+$containerPadding: 30;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+[class*="__container"] {
+   max-width: toRem($containerWidth);
+   margin-inline: auto;
+   padding-inline: toRem(math.div($containerPadding, 2));
+}
